@@ -1,6 +1,6 @@
-# Greite's Unraid Templates
+# GreiteTurtle's Unraid Templates
 
-Community Applications templates for Docker apps I maintain. One repo, multiple apps — submitted once to Unraid's Community Applications.
+Community Applications templates for Docker apps I maintain. One repo, multiple apps - submitted once to Unraid's Community Applications.
 
 ## Available templates
 
@@ -24,29 +24,3 @@ Each app exposes a `TemplateURL` pointing back to this repo, so you can also poi
 
 - Speedtest Monitor: `https://raw.githubusercontent.com/Greite/unraid-templates/main/speedtest-monitor/speedtest-monitor.xml`
 - Database Backup: `https://raw.githubusercontent.com/Greite/unraid-templates/main/database-backup/database-backup.xml`
-
-## Repository layout
-
-```
-unraid-templates/
-├── ca_profile.xml          # Repo-level Community Applications profile
-├── README.md
-├── speedtest-monitor/
-│   └── speedtest-monitor.xml
-└── database-backup/
-    └── database-backup.xml
-```
-
-Each app lives in its own folder so we can drop in assets (icons, screenshots, app-specific notes) without polluting the root.
-
-## Adding a new app
-
-1. Create `unraid-templates/<app-name>/`.
-2. Drop the `<app-name>.xml` Container template inside.
-3. Set its `<TemplateURL>` to `https://raw.githubusercontent.com/Greite/unraid-templates/main/<app-name>/<app-name>.xml`.
-4. Add a row to the table above.
-5. Commit and push — CA picks the new template up automatically.
-
-## License
-
-MIT.

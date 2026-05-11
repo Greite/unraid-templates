@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CommunityApplications>
   <Profile>
-    Greite's Unraid templates. A small collection of self-hosted Docker apps for Unraid, packaged as Community Applications templates. Currently ships Speedtest Monitor (internet speed dashboard) and Database Backup (PostgreSQL / MariaDB / MySQL / MongoDB dumps via cron). New apps are added over time. Source-available under the MIT license. Bug reports and pull requests welcome on GitHub.
+    GreiteTurtle's Unraid templates. Source-available under the MIT license. Bug reports and pull requests welcome on GitHub.
   </Profile>
   <Icon>https://github.com/Greite.png</Icon>
   <WebPage>https://github.com/Greite/unraid-templates</WebPage>
