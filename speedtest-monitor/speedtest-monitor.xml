@@ -18,6 +18,7 @@ Data is persisted to /data (mapped to /mnt/user/appdata/speedtest-monitor by def
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Greite/unraid-templates/main/speedtest-monitor/speedtest-monitor.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/Greite/speedtest-monitor/main/public/brand/icon-256.png</Icon>
+  <Screenshot>https://raw.githubusercontent.com/Greite/speedtest-monitor/main/docs/screenshots/dashboard.png</Screenshot>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -43,7 +44,6 @@ Setup notes:&#xD;
   <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="HTTP + WebSocket port served by the app." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
   <Config Name="App Data" Target="/data" Default="/mnt/user/appdata/speedtest-monitor" Mode="rw" Description="Persistent storage for the SQLite database (speedtest.db)." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/speedtest-monitor</Config>
   <Config Name="AUTH_SECRET" Target="AUTH_SECRET" Default="" Mode="" Description="REQUIRED. Secret used to sign session cookies. Generate with: openssl rand -base64 32" Type="Variable" Display="always" Required="true" Mask="true"/>
-  <Config Name="TZ" Target="TZ" Default="Europe/Paris" Mode="" Description="Display timezone inside the container (e.g. Europe/Paris, America/New_York, UTC)." Type="Variable" Display="always" Required="false" Mask="false">Europe/Paris</Config>
   <Config Name="SPEEDTEST_INTERVAL_MINUTES" Target="SPEEDTEST_INTERVAL_MINUTES" Default="15" Mode="" Description="Default measurement interval in minutes (1-1440). Can be changed at runtime from /settings without restarting." Type="Variable" Display="always" Required="false" Mask="false">15</Config>
   <Config Name="SPEEDTEST_ADMIN_EMAIL" Target="SPEEDTEST_ADMIN_EMAIL" Default="" Mode="" Description="First-run admin email (optional). When set together with SPEEDTEST_ADMIN_PASSWORD, the admin is auto-seeded on every boot (idempotent). Leave empty to use the /setup wizard instead." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="SPEEDTEST_ADMIN_PASSWORD" Target="SPEEDTEST_ADMIN_PASSWORD" Default="" Mode="" Description="First-run admin password (optional, min 10 chars). Used together with SPEEDTEST_ADMIN_EMAIL. Updating this value rehashes the admin password on the next boot." Type="Variable" Display="always" Required="false" Mask="true"/>
