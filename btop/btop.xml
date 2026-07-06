@@ -3,7 +3,7 @@
   <Name>btop</Name>
   <Plugin>true</Plugin>
   <PluginURL>https://raw.githubusercontent.com/Greite/unraid-btop/main/btop.plg</PluginURL>
-  <PluginAuthor>Greite</PluginAuthor>
+  <PluginAuthor>GreiteTurtle</PluginAuthor>
   <Support>https://github.com/Greite/unraid-btop/issues</Support>
   <Project>https://github.com/aristocratos/btop</Project>
   <Overview>btop resource monitor for Unraid. Installs the btop CLI (available over SSH and the web terminal, settings persisted across reboots) and adds a native dashboard tile showing load average, CPU temperature and the top 5 processes by CPU usage, with one-click fullscreen btop in the browser. Auto-updates track upstream btop releases. Requires Unraid 6.12+, x86_64. Note: do not install alongside the NerdTools btop package. btop itself is created by aristocratos — this plugin is an independent Unraid integration that packages the official binary, not an upstream project.</Overview>
