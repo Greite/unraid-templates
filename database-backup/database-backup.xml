@@ -22,7 +22,7 @@ Features:&#xD;
 - Streaming gzip compression, atomic file writes, timestamped dumps&#xD;
 - Optional at-rest encryption: gpg-compatible OpenPGP or age (passphrase or public key)&#xD;
 - Configurable per-job retention; old backups are only rotated after a successful run&#xD;
-- Runs unprivileged (uid 1000) after client installation; secrets never appear in process arguments&#xD;
+- Runs unprivileged (PUID/PGID, default 99:100 on Unraid) after client installation; secrets never appear in process arguments&#xD;
 - Built-in healthcheck using native database drivers (no heavy CLI downloads)&#xD;
 - Multiple databases (different types and hosts) handled by a single container&#xD;
 - Multi-architecture (amd64, arm64) and auto-rebuilt on base image security updates&#xD;
@@ -47,4 +47,6 @@ Upgrading from v1: run the built-in migrate command to convert your old backups.
   <Config Name="Backups Storage" Target="/backups" Default="/mnt/user/appdata/database-backup/backups" Mode="rw" Description="Host path where database dumps are written. Files are organized as &lt;type&gt;/&lt;job-name&gt;/&lt;job-name&gt;_&lt;timestamp&gt;.sql.gz (or .tar.gz for MongoDB), plus a .gpg or .age suffix when encryption is enabled." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/database-backup/backups</Config>
   <Config Name="Configuration File" Target="/config/backups.yml" Default="/mnt/user/appdata/database-backup/backups.yml" Mode="ro" Description="Path to the backups.yml file on the host. Get the example from https://github.com/Greite/database-backup/blob/main/backups.yml.example and edit it before starting the container. Upgrading from v1? Convert your backups.conf with the built-in migrate command (see the migration guide linked in the Overview)." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/database-backup/backups.yml</Config>
   <Config Name="Encryption Passphrase" Target="BACKUP_ENCRYPTION_PASSPHRASE" Default="" Mode="" Description="Optional. Enables gpg-compatible at-rest encryption of every backup (decrypt with gpg -d). Leave empty to disable, or use the encryption block in backups.yml for more options (age, key files)." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="UID the scheduler and dumps run as. The Backups Storage path is chowned to it at startup. 99 = nobody (Unraid default). Requires v2.1.0 or later." Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="GID the scheduler and dumps run as. 100 = users (Unraid default). Requires v2.1.0 or later." Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
 </Container>
