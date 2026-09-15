@@ -1,0 +1,10 @@
+<Plugin>
+  <Name>Traefik Rolling Update</Name>
+  <Overview>Zero-downtime updates for the Docker containers you run behind Traefik on Unraid. Tick a container in Settings and the Docker page's Update / Update All start the new version next to the old one, let Traefik switch over once it is healthy, then remove the old one. If the new version never becomes healthy it is removed and the running instance is untouched. Nothing else to configure: missing Traefik service/port labels and healthchecks are added automatically, the template is never modified; an optional per-container HTTP healthcheck (path, expected code, text, timing) is available in Settings. Containers you do not tick keep Unraid's stock Update. Requires Unraid 7.3.0+ and Traefik with its Docker provider; a ticked container must tolerate two instances running for a few seconds and must not publish a host port.</Overview>
+  <PluginURL>https://raw.githubusercontent.com/Greite/unraid-traefik-rolling-update/main/traefik.rolling.update.plg</PluginURL>
+  <Support>https://github.com/Greite/unraid-traefik-rolling-update/issues</Support>
+  <Project>https://github.com/Greite/unraid-traefik-rolling-update</Project>
+  <ReadMe>https://raw.githubusercontent.com/Greite/unraid-traefik-rolling-update/main/README.md</ReadMe>
+  <Category>Tools:Utilities</Category>
+  <Icon>https://raw.githubusercontent.com/Greite/unraid-traefik-rolling-update/main/source/traefik.rolling.update/usr/local/emhttp/plugins/traefik.rolling.update/images/traefik.rolling.update.png</Icon>
+</Plugin>

@@ -9,6 +9,7 @@ Community Applications templates for Docker apps I maintain. One repo, multiple 
 | [speedtest-monitor](./speedtest-monitor/speedtest-monitor.xml) | Self-hosted internet speed monitor with live dashboard, history, alerts, and OIDC auth | `ghcr.io/greite/speedtest-monitor:latest` |
 | [database-backup](./database-backup/database-backup.xml) | Automated PostgreSQL / MariaDB / MySQL / MongoDB dumps via cron, with rotation and healthcheck | `ghcr.io/greite/database-backup:latest` |
 | [btop](./btop/btop.xml) | Unraid plugin: btop CLI + dashboard tile (top processes, load, CPU temp) | plugin (`btop.plg`) |
+| [traefik-rolling-update](./traefik-rolling-update/traefik-rolling-update.xml) | Unraid plugin: zero-downtime updates for containers behind Traefik (Traefik Rolling Update) | plugin (`traefik.rolling.update.plg`) |
 
 ## Install via Community Applications
 
